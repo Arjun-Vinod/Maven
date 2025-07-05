@@ -22,10 +22,5 @@ pipeline{
                 sh 'java -jar /var/lib/jenkins/workspace/Declarative_Pipeline/testing.jar'
             }
         }
-        stage('Delivery'){
-            steps{
-                sh 'scp /var/lib/jenkins/workspace/Declarative_Pipeline/webapp/target/webapp.war ubuntu@172.31.21.251:/var/lib/tomcat10/webapps/prodapp.war'
-            }
-        }
     }
 }
